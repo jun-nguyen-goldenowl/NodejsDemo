@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_URI).then(() => {
 mongoose.connection.on("error", (err) => {
   console.log(`DB connect error: ${err.message}`);
 });
-const postRoutes = require("./routes/post");
+const postRoutes = require("./src/routes/post");
 
 //middleware
 app.use(morgan("dev"));
